@@ -3,6 +3,7 @@
 #include <math.h>
 #include <time.h>
 #include "graph.h"
+#include "rdmwalk.h"
 #define vertex int
 
 main(){
@@ -20,9 +21,9 @@ main(){
     createVertex(circ, 2, cost);
     cost = 0.05/(1+(1.0/4));
     createVertex(circ, 3, cost);
-    createVertex(circ, 4, 1.0);
-    createVertex(circ, 5, 1.0);
-    createVertex(circ, 6, 1.0);
+    createVertex(circ, 4, -1.0);
+    createVertex(circ, 5, -1.0);
+    createVertex(circ, 6, -1.0);
 
     //Criando os arcos
     float p = 1/(1+0.5);
@@ -49,12 +50,12 @@ main(){
 
     printAdjList(circ);
 
-    srand(time(NULL));
-    for(int i=0; i<10; i++){
-        int value= rand()%10000;
-        printf("\nRandom nunber: %.2f", value/100.0);
-    }
+    walker* e = malloc(sizeof(e));
+    e->balance = 0;
+    e->vertex_id = 0;
 
-    printf("\nRodou ate o final!\n");
+    sim(e, circ, 200);
+
+    printf("\nRodou ate o final! %.2f\n",e->balance);
 }
 

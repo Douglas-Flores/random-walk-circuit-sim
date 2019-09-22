@@ -15,10 +15,20 @@
 
 1569163961 d:\users\douglas\documents\gitprojects\random-walk-circuit-sim\graph.h
 
-1569173198 source:d:\users\douglas\documents\gitprojects\random-walk-circuit-sim\main.c
+1569181261 source:d:\users\douglas\documents\gitprojects\random-walk-circuit-sim\main.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
 	<time.h>
 	"graph.h"
+	"rdmwalk.h"
+
+1569179450 d:\users\douglas\documents\gitprojects\random-walk-circuit-sim\rdmwalk.h
+	"graph.h"
+	"time.h"
+
+1569181309 source:d:\users\douglas\documents\gitprojects\random-walk-circuit-sim\rdmwalk.c
+	<stdlib.h>
+	"rdmwalk.h"
+	"time.h"
 
